@@ -28,6 +28,13 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
+  border: 2px solid black;
+}
+.appointment{
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 600px;
+  margin: auto;
 }
 
 .row {
