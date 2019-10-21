@@ -1,9 +1,24 @@
 
+// issues:
+// 1. not possible to have 2 moment.js at the same time
+// 2. how to compare the time and the schedule
+// 3. cant show the stored things 
+
+
 // date on the title
+
 var dateOfToday = moment().format('MMMM Do YYYY, h:mm a'); 
-var timeControl = moment().format('LT').value;
+ var timeControl = moment().format('LT');
 $('#currentDay').append('<p>').text(dateOfToday);
 
+
+
+if (timeControl > '09:23 PM') {
+    console.log('yes')
+}
+else{
+    console.log('no')
+};
 
 // change colours: if it is time green future other colour
 //console.log(timeControl);
@@ -23,7 +38,7 @@ saveButton.addEventListener("click", function (event) {
     renderStored();
       function renderStored() {
         var getInput = JSON.parse(localStorage.getItem("input"));
-        $("#input").append(getInput);
+        $("#input").append('</p>').text(getInput);
     }
 });
 
