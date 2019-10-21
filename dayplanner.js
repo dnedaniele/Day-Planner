@@ -19,5 +19,11 @@ saveButton.addEventListener("click", function (event) {
     localStorage.setItem("input", JSON.stringify(inputValue));
 
     /// render the infos of the storage
+
+    renderStored();
+      function renderStored() {
+        var getInput = JSON.parse(localStorage.getItem("input"));
+        $("#input").append(getInput);
+    }
 });
 
