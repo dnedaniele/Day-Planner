@@ -8,17 +8,21 @@
 // date on the title
 
 var dateOfToday = moment().format('MMMM Do YYYY, h:mm a'); 
- var timeControl = moment().format('LT');
+ var timeControl = moment().hour();
+ console.log(timeControl)
+
 $('#currentDay').append('<p>').text(dateOfToday);
 
 
+var calendarTime = $('time-block').attr('time', 9);
+console.log(calendarTime.attr)
 
-if (timeControl > '09:23 PM') {
-    console.log('yes')
-}
-else{
-    console.log('no')
-};
+// if (timeControl > '09:23 PM') {
+//     console.log('yes')
+// }
+// else{
+//     console.log('no')
+// };
 
 // change colours: if it is time green future other colour
 //console.log(timeControl);
