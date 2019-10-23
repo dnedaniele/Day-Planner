@@ -13,9 +13,9 @@ var dateOfToday = moment().format('MMMM Do YYYY, h:mm a');
 
 $('#currentDay').append('<p>').text(dateOfToday);
 
+var morning = "09:00"
+ $('.time-block').text(moment().format('LT'));
 
-var calendarTime = $('time-block').attr('time', 9);
-console.log(calendarTime.attr)
 
 // if (timeControl > '09:23 PM') {
 //     console.log('yes')
@@ -29,6 +29,13 @@ console.log(calendarTime.attr)
 // if (timeControl ==
 
 
+function renderStored() {
+    var getInput = JSON.parse(localStorage.getItem("input"));
+    console.log(getInput)
+    $(".appointment").val(getInput);
+}
+
+
 // Local Storage
 var saveButton = document.querySelector("#myBtn");
 saveButton.addEventListener("click", function (event) {
@@ -39,10 +46,9 @@ saveButton.addEventListener("click", function (event) {
 
     /// render the infos of the storage
 
-    renderStored();
-      function renderStored() {
-        var getInput = JSON.parse(localStorage.getItem("input"));
-        $("#input").append('</p>').text(getInput);
-    }
+  
+  
 });
+
+renderStored();
 
