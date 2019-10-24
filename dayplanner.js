@@ -14,8 +14,10 @@ var dateOfToday = moment().format('MMMM Do YYYY, h:mm a');
 $('#currentDay').append('<p>').text(dateOfToday);
 
 var morning = "09:00"
- $('.time-block').text(moment().format('LT'));
+ $('.time-block').text(moment().format('HH'));
 
+ array [9,10,11] 
+ parseInt
 
 // if (timeControl > '09:23 PM') {
 //     console.log('yes')
@@ -52,3 +54,11 @@ saveButton.addEventListener("click", function (event) {
 
 renderStored();
 
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
+
+array.forEach(element => {
+    
+});
