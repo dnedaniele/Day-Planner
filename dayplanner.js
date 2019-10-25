@@ -15,11 +15,17 @@ $('#currentDay').append('<p>').text(dateOfToday);
 
  var times = ['9','10','11','12','13','14','15','16','17']; 
 
-//for (i = 0; i < time.length; i++) 
-   //if (time[i] === timeControl.value)
+for (i = 0; i < times.length; i++) {
+
+}
+   
 
 
-console.log($('.time-block').time)
+$(document).ready(function() {
+$('box[time=[i]]')
+});
+
+console.log($('box[time=10]'));
 
  parseInt
 
